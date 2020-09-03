@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/nombre"
+        android:textSize="@dimen/tam_textos"
         android:inputType="textPersonName" />
 
     <EditText
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/mail"
+        android:textSize="@dimen/tam_textos"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -30,6 +32,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/passwd"
+        android:textSize="@dimen/tam_textos"
         android:inputType="textPassword" />
 
     <EditText
@@ -38,6 +41,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/rep_passwd"
+        android:textSize="@dimen/tam_textos"
         android:inputType="textPassword" />
 
     <TextView
@@ -45,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/tipo_tarjeta"/>
+        android:text="@string/tipo_tarjeta"/>
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -80,7 +84,9 @@
             android:layout_weight="1"
             android:ems="20"
             android:hint="@string/tarjeta"
-            android:inputType="number" />
+            android:textSize="@dimen/tam_textos"
+            android:inputType="number"
+            android:maxLength="18" />
 
         <EditText
             android:id="@+id/etNumeroCCV"
@@ -89,7 +95,9 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/ccv"
-            android:inputType="number" />
+            android:textSize="@dimen/tam_textos"
+            android:inputType="number"
+            android:maxLength="3" />
     </LinearLayout>
 
 
@@ -102,20 +110,44 @@
             android:id="@+id/etNumeroMes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="50"
             android:ems="10"
             android:hint="@string/mes"
-            android:inputType="number" />
+            android:textSize="@dimen/tam_textos"
+            android:inputType="number"
+            android:maxLength="2" />
 
         <EditText
             android:id="@+id/etNumeroAnio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="50"
             android:ems="10"
             android:hint="@string/anio"
-            android:inputType="number" />
+            android:textSize="@dimen/tam_textos"
+            android:inputType="number"
+            android:maxLength="2" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/etCBU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/cbu"
+        android:textSize="@dimen/tam_textos"
+        android:inputType="number"
+        android:maxLength="22"/>
+
+    <EditText
+        android:id="@+id/etAlias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/alias"
+        android:textSize="@dimen/tam_textos"
+        android:inputType="text"
+        android:maxLength="20" />
 
     <Switch
         android:id="@+id/swHabilitaCarga"
@@ -128,18 +160,23 @@
     <SeekBar
         android:id="@+id/seekBarDineroInicial"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:max="1500"/>
 
     <CheckBox
         android:id="@+id/checkBoxTerminos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/term_cond" />
+        android:text="@string/term_cond"
+        android:textSize="@dimen/tam_textos" />
 
     <Button
         android:id="@+id/buttonRegistrar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/registrar" />
+        android:text="@string/registrar"
+        android:textSize="@dimen/tam_textos"
+        android:enabled="false"/>
 
 </LinearLayout>

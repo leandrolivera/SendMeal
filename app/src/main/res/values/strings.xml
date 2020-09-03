@@ -14,4 +14,6 @@
     <string name="carga">¿Realizar una carga inicial?</string>
     <string name="term_cond">Acepto los términos y condiciones</string>
     <string name="registrar">Registrar</string>
+    <string name="cbu">CBU</string>
+    <string name="alias">Alias</string>
 </resources>
